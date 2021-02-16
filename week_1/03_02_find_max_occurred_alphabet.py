@@ -10,13 +10,15 @@ def find_max_occurred_alphabet(string):
         index = ord(char) - ord('a')
         alphabet_occurrence_array[index] += 1
 
-    nth = 0
+    max_occurrence = 0
+    max_alphabet_index = 0
     for index in range(len(alphabet_occurrence_array)):
-        if alphabet_occurrence_array[index] > alphabet_occurrence_array[nth]:
-            nth = index
-    mode = chr(nth + ord('a'))
+        alphabet_occurrence = alphabet_occurrence_array[index]
+        if alphabet_occurrence > max_occurrence:
+            max_occurrence = alphabet_occurrence
+            max_alphabet_index = index
 
-    return mode
+    return chr(max_alphabet_index + ord('a'))
 
 
 result = find_max_occurred_alphabet(input)
