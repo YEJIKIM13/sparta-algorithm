@@ -4,9 +4,9 @@ shop_orders = ["오뎅", "콜라", "만두"]
 
 def is_available_to_order(menus, orders):
     menus.sort()
-    for menu in orders:
+    for menu_order in orders:
         # 없다면 즉시 False 리턴하고 함수 종료
-        if not is_existing_target_number_binary(menu, menus):  # not (없다(False)) == True -> 없을 때 조건이 참이 되며 실행이 됨
+        if not is_existing_target_number_binary(menu_order, menus):  # not (없다(False)) == True -> 없을 때 조건이 참이 되며 실행이 됨
             return False
     return True
 
