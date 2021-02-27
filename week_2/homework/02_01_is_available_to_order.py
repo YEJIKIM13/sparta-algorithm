@@ -12,6 +12,7 @@ def is_available_to_order(menus, orders):
     return True
     # O((M+N) * logN)
 
+
 # 이진 탐색 함수 가져다 쓰기
 def is_existing_target_number_binary(target, array):
     start = 0  # current_min
