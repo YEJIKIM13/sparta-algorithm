@@ -14,6 +14,9 @@ class LinkedList:
             cur = cur.next
         cur.next = Node(value)
 
+    # 1. 링크드 리스트 길이 전부 알아내기
+    # 2. 그 길이에서 k 만큼 뺀 길이만큼 이동
+
     def get_kth_node_from_last(self, k):
         # 노드 전체 개수 구하기
         count = 1  # self.head 의 개수도 반영되어야 하니까
