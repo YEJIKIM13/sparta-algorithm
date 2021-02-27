@@ -5,14 +5,17 @@ count = 0
 
 # 배열, 타겟넘버, 현재 인덱스, 현재 해당하는 합계
 def get_count_of_ways_to_target_by_doing_plus_or_minus(array, target, curr_index, curr_sum):
-    if curr_index == len(numbers):
+    # curr_index 가 맨 마지막에 다다랐을 때!
+    if curr_index == len(array):  # 탈출 조건
         if curr_sum == target:
             global count
             count += 1
         return
-    get_count_of_ways_to_target_by_doing_plus_or_minus(array, target, curr_index + 1, curr_sum + numbers[curr_index])
-    get_count_of_ways_to_target_by_doing_plus_or_minus(array, target, curr_index + 1, curr_sum - numbers[curr_index])
+    get_count_of_ways_to_target_by_doing_plus_or_minus(array, target, curr_index + 1, curr_sum + array[curr_index])
+    get_count_of_ways_to_target_by_doing_plus_or_minus(array, target, curr_index + 1, curr_sum - array[curr_index])
 
 
+# curr_index = 0
+# curr_sum = 0
 get_count_of_ways_to_target_by_doing_plus_or_minus(numbers, target_number, 0, 0)
 print(count)  # 5를 반환해야 합니다!
