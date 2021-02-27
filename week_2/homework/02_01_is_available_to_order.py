@@ -3,13 +3,14 @@ shop_orders = ["오뎅", "콜라", "만두"]
 
 
 def is_available_to_order(menus, orders):
-    menus.sort()
+    menus.sort()  # 정렬의 시간복잡도는 보통 배열의 길이를 N 이라고 한다면 O(N * logN)
     for menu_order in orders:
         # 없다면 즉시 False 리턴하고 함수 종료
+        # 이분 탐색 호출하는 시간 O(logN) 인데 그걸 orders 의 길이만큼 반복, 결국 O(M * logN)
         if not is_existing_target_number_binary(menu_order, menus):  # not (없다(False)) == True -> 없을 때 조건이 참이 되며 실행이 됨
             return False
     return True
-
+    # O((M+N) * logN)
 
 # 이진 탐색 함수 가져다 쓰기
 def is_existing_target_number_binary(target, array):
