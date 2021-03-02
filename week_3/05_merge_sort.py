@@ -3,7 +3,7 @@ array = [5, 3, 2, 1, 6, 8, 7, 4]
 
 def merge_sort(array):
     mid = len(array) // 2  # 인자로 받는 배열길이의 반 (중간값!!!)
-    if len(array) <= 1:  # 들어온 친구가 <= 1 이라면 그대로 리턴 
+    if len(array) <= 1:  # 들어온 친구가 <= 1 이라면 그대로 리턴
         return array
     left_array = merge_sort(array[:mid])  # 정렬된 왼쪽배열
     right_array = merge_sort(array[mid:])  # 정렬된 오른쪽배열
