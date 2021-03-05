@@ -31,7 +31,7 @@ def get_melon_best_album(genre_array, play_array):
         index_play_array_sort = sorted(index_play_array, key=lambda item: item[1], reverse=True)  # [4, 2500], [1, 600]
         for i in range(len(index_play_array_sort)):
             if i >= 2:  # 인덱스 0, 인덱스 1 까지 (두 개) 받아야 하니까
-                break
+                break  # 두 개니까 인덱스 0, 1 끝나면 반복문 탈출
             result_array.append(index_play_array_sort[i][0])  # 인덱스만 받아옴
 
     return result_array
