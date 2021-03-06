@@ -12,7 +12,7 @@ class Queue:
     def enqueue(self, value):
         new_node = Node(value)
         # 비었는지 안 비었는지 여부에 따라 예외처리를 따로 해주어야 한다.
-        # .next 가 문제를 일으킬 것임...
+        # .next 가 문제를 일으킬 것임...-> use if
         if self.is_empty():
             self.head = new_node
             self.tail = new_node
