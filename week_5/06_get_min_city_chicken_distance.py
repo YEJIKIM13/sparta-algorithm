@@ -52,7 +52,7 @@ def get_min_city_chicken_distance(n, m, city_map):
             # 도시의 최소 치킨거리 + 집의 치킨거리
             city_chicken_distance += min_home_chicken_distance
 
-        # combinations 를 다시 한 번 city_chicken_distance 랑 비교해서 최솟값을 넣어주면 됨!
+        # combinations 를 다시 한 번 city_chicken_distance 랑 비교해서 최솟값을 넣어주면 됨
         min_distance_of_m_combinations = min(min_distance_of_m_combinations, city_chicken_distance)
 
     return min_distance_of_m_combinations
