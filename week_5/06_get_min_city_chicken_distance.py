@@ -32,7 +32,7 @@ def get_min_city_chicken_distance(n, m, city_map):
     # 왜냐면 지금 입력값 치킨집이 3개라 조합이 하나밖에 없어서 한 개 밖에 안나옴!
 
     # 최소 도시 치킨 거리 구하기
-    min_distance_of_m_combinations = sys.maxsize
+    min_distance_of_m_combinations = sys.maxsize  # 최솟값 초기 설정은 되도록 크게
 
     for chicken_location_m_combination in chicken_location_m_combinations:  # 조합을 꺼내올 것
         city_chicken_distance = 0  # 이 조합에서 얻고 싶은 건 도시 치킨거리가 얼마나 될지니까 초기화
